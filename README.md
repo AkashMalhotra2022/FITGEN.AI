@@ -385,41 +385,6 @@ Prompt engineering is not a one-shot activity — it is an iterative design proc
 
 ---
 
-## Testing
-
-FITGEN.AI includes a comprehensive automated test suite built with pytest.
-
-### Running Tests
-
-```bash
-# Install test dependencies
-pip install pytest pytest-cov pytest-mock
-
-# Run all tests
-python -m pytest tests/ -v
-
-# Run with coverage report
-python -m pytest tests/ --cov=agent --cov-report=term-missing
-
-# Run baseline evaluation (requires OPENAI_API_KEY)
-python -m testing.baseline_testing
-```
-
-### Test Suite Summary
-
-| Test File | Tests | Coverage Area |
-|-----------|-------|---------------|
-| `test_conversation_workflow.py` | 30 | Profile validation, intent detection, yes/no parsing |
-| `test_persistence.py` | 12 | SQLite CRUD operations |
-| `test_prompts.py` | 7 | Prompt template regression guards |
-| `test_state_sync.py` | 5 | State merge logic |
-| `test_base_agent.py` | 4 | Agent creation, technique swapping |
-| `test_config.py` | 2 | Centralized config |
-| **Total** | **73** | **47% code coverage on agent/ package** |
-
-### Assignment 6 Report
-
-See [`docs/assignment6_report.md`](docs/assignment6_report.md) for the complete Test & Refinement report including baseline testing results, iteration logs, new features, and reflection.
 
 ---
 
